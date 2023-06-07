@@ -32,14 +32,14 @@ Route::post('/users/create', function(Request $request){
                 "response" => [
                     "error" => "An unexpected error has occured"
                 ]
-                ];
+            ];
         }else{
             return[
                 "success" => true,
                 "response" => [
                     "user" => $user
                 ]
-                ];
+            ];
         }
     }else{
         return[
@@ -47,7 +47,7 @@ Route::post('/users/create', function(Request $request){
             "response" => [
                 "error" => "The user already exists"
             ]
-            ];
+        ];
     }
 });
 
@@ -62,14 +62,14 @@ Route::get("/users/all", function(){
         "response" =>[
             "error" => "No users found"
         ]
-       ];
+    ];
    }
     return[
         "success" => true,
         "response" => [
             "users" => $users
         ]
-        ];
+    ];
 });
 
 //Get User
@@ -82,14 +82,14 @@ Route::get("/users/{id}", function (Request $request, $id){
             "response" =>[
                 "error" => "No user found"
             ]
-           ]; 
+        ]; 
     }
     return[
         "success" => true,
         "response" => [
             "user" => $user
         ]
-        ];
+    ];
 });
 
 //Delete User
@@ -109,7 +109,7 @@ Route::delete("/users/delete/{id}", function (Request $request, $id){
             "response" =>[
                 "message" => "User deleted"
             ]
-           ]; 
+        ]; 
     }
 });
 
